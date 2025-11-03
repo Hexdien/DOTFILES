@@ -15,7 +15,7 @@ window#waybar {
   color: #e5e5e5;
   margin: 2px 10px;
   border-radius: 12px;
-  padding: 2px 6px;
+  padding: 2px 20px;
 
   }
 
@@ -197,7 +197,7 @@ label:focus {
     background-color: #000000;
 }
 
-#cpu, #memory, #pulseaudio, #keyboard-state  {
+#cpu, #memory, #pulseaudio, #keyboard-state, #clock  {
 background: rgba(255, 255, 255, 0.07);
   color: #fff;
   font-weight: bold;
