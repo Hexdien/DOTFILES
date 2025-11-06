@@ -18,9 +18,10 @@
   ],
   "modules-right": [
     "pulseaudio",
+    "network",
     "cpu",
     "memory",
-    "keyboard-state",
+    "disk",
     "clock",
     "custom/power"
   ],
@@ -76,7 +77,7 @@
       "play-pause": "playerctl play-pause",
       "next": "playerctl next",
       "previous": "playerctl previous"
-    },
+    }
   },
   "tray": {
     // "icon-size": 21,
@@ -88,8 +89,8 @@
   },
   "clock": {
     // "timezone": "America/New_York",
-    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-    "format-alt": "{:%Y-%m-%d}"
+    "format": "{:%H:%M %d/%m}",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt> "
   },
   "cpu": {
     "format": "{usage}% ",
@@ -97,16 +98,12 @@
   },
   "memory": {
     "interval": 5,
-    "format": "Memória {percentage}% {icon}",
+    "format": "Mem {percentage}%",
+    "format_alt": "{percentage_free}%",
     "states": {
       "vazio": 0,
       "medio": 50,
       "cheio": 90
-    },
-    "format-icons": {
-      "vazio": "",
-      "medio": "",
-      "cheio": ""
     }
   },
   "temperature": {
@@ -178,7 +175,7 @@
     "tooltip-format": "{ifname} via {gwaddr} ",
     "format-linked": "{ifname} (No IP) ",
     "format-disconnected": "Disconnected ⚠",
-    "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    "format-alt": "Down {bandwidthDownBytes}  {bandwidthUpBytes} Up"
   },
   "pulseaudio": {
     // "scroll-step": 1, // %, can be a float
@@ -213,5 +210,12 @@
       "reboot": "reboot",
       "suspend": "systemctl suspend"
     }
+  },
+  "disk": {
+    "interval": 30,
+    "format": "{specific_free:0.1f} GB",
+    "tooltip": true,
+    "tooltip-format": "{specific_free:0.2f} GB out of {specific_total:0.2f} GB available. Alternatively {free} out of {total} available",
+    "unit": "GB"
   }
 }
