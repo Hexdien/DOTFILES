@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo cloudflared proxy-dns &
+cloudflared proxy-dns
