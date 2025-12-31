@@ -1,6 +1,4 @@
--- ~/.config/nvim/lua/plugins/java.lua
 return {
-	-- Plugin principal (nvim-java)
 	{
 		"nvim-java/nvim-java",
 		ft = { "java" },
@@ -10,19 +8,21 @@ return {
 			},
 		},
 	},
-	-- Evitar conflito: não deixar LazyVim subir jdtls "por conta própria"
+
+	-- Impedir que o LazyVim/lspconfig tente subir jdtls por fora
 	{
 		"neovim/nvim-lspconfig",
 		opts = {
-			servers = { jdtls = nil }, -- não peça p/ mason instalar/gerir jdtls
+			servers = {
+				jdtls = nil,
+			},
 			setup = {
 				jdtls = function()
 					return true
 				end,
-			}, -- e não faça setup duplicado
+			},
 		},
 	},
 
-	-- Se o nvim-jdtls estiver presente por algum motivo, desabilite:
-	{ "mfussenegger/nvim-jdtls", enabled = false },
+	-- NÃO declarar nvim-jdtls em lugar nenhum
 }

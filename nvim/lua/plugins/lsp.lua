@@ -10,12 +10,4 @@ return {
 		end,
 	},
 	-- Other LSP-related configurations
-	{
-		"nvim-lspconfig",
-		opts = {
-			inlay_hints = {
-				enabled = false,
-			},
-		},
-	},
 }
