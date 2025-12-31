@@ -1,5 +1,5 @@
 #!/bin/bash
-CONFIGS=(hypr wofi waybar kitty)
+CONFIGS=(hypr wofi waybar kitty nvim)
 
 for cfg in "${CONFIGS[@]}"; do
   rm -rf ~/.config/$cfg
