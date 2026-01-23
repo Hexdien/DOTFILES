@@ -17,6 +17,7 @@
     "custom/media"
   ],
   "modules-right": [
+    "tray",
     "pulseaudio",
     "network",
  //   "cpu",
@@ -88,7 +89,7 @@
     // }
   },
   "clock": {
-    "format": "{:%H:%M}  ",
+    "format": "{:%H:%M} ",
     "format-alt": "{:L%A, %B %d, %Y (%R)} ",
     "tooltip-format": "\n<span size='9pt' >{calendar}</span>",
     "calendar": {
@@ -197,11 +198,11 @@
   "network": {
     // "interface": "wlp2*", // (Optional) To force the use of this interface
     "format-wifi": "{essid} ({signalStrength}%) ",
-    "format-ethernet": "{ipaddr}/{cidr} ",
+    "format-ethernet": "",
     "tooltip-format": "{ifname} via {gwaddr} ",
     "format-linked": "{ifname} (No IP) ",
     "format-disconnected": "⚠",
-    "format-alt": ""
+    "format-alt": "{ipaddr}/{cidr} "
   },
   "pulseaudio": {
     // "scroll-step": 1, // %, can be a float
@@ -227,7 +228,7 @@
     "on-click": "pavucontrol"
   },
   "custom/power": {
-    "format": "⏻",
+    "format": " ⏻ ",
     "tooltip": false,
     "menu": "on-click",
     "menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
