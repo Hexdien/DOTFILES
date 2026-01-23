@@ -19,9 +19,9 @@
   "modules-right": [
     "pulseaudio",
     "network",
-    "cpu",
-    "memory",
-    "disk",
+ //   "cpu",
+ //   "memory",
+ //   "disk",
     "clock",
     "custom/power"
   ],
@@ -200,8 +200,8 @@
     "format-ethernet": "{ipaddr}/{cidr} ",
     "tooltip-format": "{ifname} via {gwaddr} ",
     "format-linked": "{ifname} (No IP) ",
-    "format-disconnected": "Disconnected ⚠",
-    "format-alt": "Down {bandwidthDownBytes}  {bandwidthUpBytes} Up"
+    "format-disconnected": "⚠",
+    "format-alt": ""
   },
   "pulseaudio": {
     // "scroll-step": 1, // %, can be a float
@@ -227,7 +227,7 @@
     "on-click": "pavucontrol"
   },
   "custom/power": {
-    "format": "⏻ Energia ",
+    "format": "⏻",
     "tooltip": false,
     "menu": "on-click",
     "menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
