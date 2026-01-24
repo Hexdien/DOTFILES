@@ -2,7 +2,6 @@
     /* `otf-font-awesome` is required to be installed for icons */
 
     font-family: "JetBrainsMono Nerd Font", "Roboto Mono", monospace;
-    font-size: 13px;
     min-height: 5px;
 
 
@@ -18,12 +17,15 @@ window#waybar.hidden {
 }
 
 #window {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.12);
   border-radius: 22px;
-    color: #ffffff;
-    margin: 5px 10px;
-padding: 6px 14px;    
+  color: #fff;
+
+  margin: 3px 10px;
+  padding: 6px 14px;
+
+  font-size: 10px;
+
 }
 
 
@@ -36,6 +38,8 @@ tooltip {
 }
 
 
+
+
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 button:hover {
     background: inherit;
@@ -44,6 +48,7 @@ button:hover {
 #workspaces button{
     background: rgba(255, 255, 255, 0.12);
     color: #000;
+    font-size: 13px;
     font-weight: bold;
     border-radius: 10px;
     margin: 4px 4px;
@@ -74,6 +79,7 @@ button:hover {
 #clock {
     background: rgba(255, 255, 255, 0.12);
     color: #fff;
+    font-size: 13px;
     font-weight: bold;
     border-radius: 10px;
     margin: 4px 4px;
@@ -92,6 +98,8 @@ button:hover {
     margin-right: 0;
 }
 
+
+/* Bandeja de programas */ 
 #tray menu {
   background: rgba(55, 55, 55, 0.5);
     color: #fff;
@@ -123,6 +131,7 @@ button:hover {
 }
 
 
+
 #network:hover,
 #pulseaudio:hover,
 #clock:hover {
@@ -144,6 +153,8 @@ button:hover {
 
 /* Botão de media central para controle de musicas */ 
 
+
+#custom-launch_wofi,
 #custom-media {
   background: rgba(255, 255, 255, 0.12);
   color: #fff;
@@ -156,23 +167,24 @@ button:hover {
     transition: background 0.25s ease-in-out, border 0.25s ease-in-out;
 }
 
+/* Botão de pesquisa */ 
+
+#custom-launch_wofi{
+  margin: 4px 2px 4px 8px;
+  padding: 2px 8px;
+}
+
+#custom-launch_wofi:hover {
+    background: rgba(255, 255, 255, 0.4); /* mais intenso */
+}
+
+
+
+
 #custom-media:hover {
     background: rgba(0, 105, 212, 0.7); /* mais intenso */
 }
 
-
-#custom-media.active {
-    background: rgba(0,105,212,0.7);
-    border: 2px solid rgba(255,85,85,0.5);
-}
-
-#custom-media.custom-spotify {
-    background-color: #66cc99;
-}
-
-#custom-media.custom-vlc {
-    background-color: #ffa000;
-}
 
 /* Botão power */ 
 #custom-power {
@@ -194,3 +206,5 @@ button:hover {
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 
 }
+
+
