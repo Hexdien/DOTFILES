@@ -37,12 +37,12 @@ window {
     padding: 10px;
 }
 
+
 #inner-box{
     background: rgba(0, 0, 0, 0.3);
     border-radius: 12px;
     padding: 10px;
 }
-
 #scroll {
     margin: 0;
     border: none;
@@ -54,34 +54,19 @@ window {
    ========================= */
 
 #entry > * {
-    background: rgba(255, 255, 255, 0.3);
-    margin: 4px;
-    padding: 6px 8px;
-    border-radius: 10px;
+  margin: 4px;
+  padding: 6px 8px;
 }
 
 #text {
-    margin: 0;
-    border: none;
-    color: #1a1a1a;
+    color: #fff;
 }
-
-
-/* =========================
-   Estados
-   ========================= */
-
 #entry:selected {
-    background: rgba(60, 120, 255, 0.3);
-    margin: 6px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
 }
 
-#entry:selected #text {
-    color: #ffffff;
-    font-weight: bold;
-}
 
-#entry.activatable #text {
-    color: #1a1a1a;
-}
+
+
 
