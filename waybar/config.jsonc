@@ -129,4 +129,12 @@
   "on-click": "/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=mpv --file-forwarding io.mpv.Mpv --player-operation-mode=pseudo-gui"
   },
 
+"custom/dolphin": {
+  "format": "📂",
+  "tooltip": true,
+  "tooltip-format": "Gerenciador de Arquivos",
+  "on-click": "dolphin"
+  }
+
+
 }
