@@ -114,10 +114,12 @@
     "unit": "GB"
   },
 
-
+// Modulos customizados 
 "custom/launch_wofi": {
-  "format": "",                    // ícone (pode trocar por outro)
-  "tooltip": "Wofi Launch",        // texto ao passar o mouse
-  "on-click": "wofi --show drun"    // comando que abre o Wofi
-}
+  "format": "",
+  "tooltip": true,
+  "tooltip-format": "Aplicativos",
+  "on-click": "uwsm app -- wofi --show drun"
+  },
+
 }
