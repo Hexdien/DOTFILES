@@ -122,4 +122,11 @@
   "on-click": "uwsm app -- wofi --show drun"
   },
 
+"custom/mpv": {
+  "format": "",
+  "tooltip": true,
+  "tooltip-format": "Abrir reprodutor de mídia MPV",
+  "on-click": "/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=mpv --file-forwarding io.mpv.Mpv --player-operation-mode=pseudo-gui"
+  },
+
 }
