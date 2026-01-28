@@ -1,33 +1,22 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-
     font-family: "JetBrainsMono Nerd Font", "Roboto Mono", monospace;
-    min-height: 5px;
-
 
 }
-window#waybar {
+
+
+#waybar {
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 20px;
   }
 
-window#waybar.hidden {
+#waybar.hidden {
     opacity: 0.2;
 }
 
-#window {
-  background: rgba(255, 255, 255, 0.12);
-  border-radius: 22px;
-  color: #fff;
-  margin: 3px 10px;
-  padding: 6px 14px;
 
-
-}
-
-
-tooltip {
+#tooltip {
   background: rgba(0, 0, 0, 0.85);
   color: #ffffff;
   border-radius: 10px;
@@ -43,6 +32,7 @@ button:hover {
     background: inherit;
     box-shadow: inset 0 -3px #ffffff;
 }
+/*
 #workspaces button{
     background: rgba(255, 255, 255, 0.12);
     color: #000;
@@ -58,9 +48,49 @@ button:hover {
               padding 0.3s ease-in-out;
     color: #fff;
     background: rgba(255, 255, 255, 0.55);
-    margin: 2px 4px;
+    margin: 0px 4px;
     padding: 0px 0px;
 }
+*/ 
+
+
+#workspaces {
+    padding: 0px;
+}
+
+#workspaces button {
+
+    background: rgba(255, 255, 255, 0.12);
+    color: #000;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    border-radius: 10px;
+
+    /* botão inativo MENOR */
+    padding: 0px;
+    margin: 8px 4px;   /* <-- isso cria o “respiro” vertical */
+    min-height: 14px; /* controla o tamanho real do inativo */
+
+    transition:
+        background 0.3s ease,
+        margin 0.3s ease,
+        min-height 0.3s ease;
+}
+
+/* workspace ATIVO */
+#workspaces button.active {
+    background: rgba(255, 255, 255, 0.55);
+    color: #fff;
+
+    /* ocupa a barra inteira */
+    margin: 0px 4px;
+    min-height: unset;
+
+    border-radius: 10px;
+}
+
 
 
 #workspaces button:hover {
@@ -115,7 +145,7 @@ button:hover {
 #tray menu menuitem {
   background: rgba(5, 5, 5, 0.5);
     padding-top: 3px; padding-bottom: 3px;
-    font-size: 22px; 
+    font-size: 12px; 
   }
 #tray menu menuitem:hover {
   background: rgba(255, 255, 255, 0.8);
@@ -155,7 +185,6 @@ button:hover {
   border-radius: 10px;
   margin: 4px 0px;
   padding: 2px 8px;
-  font-size: 16px;
   transition: all 0.25s ease-in-out;
     transition: background 0.25s ease-in-out, border 0.25s ease-in-out;
 }
@@ -185,8 +214,7 @@ button:hover {
   border-radius: 10px;
   margin: 4px 10px 4px 0;
   padding: 2px 15px;
-    font-size: 16px;
-    transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
 }
 
 
