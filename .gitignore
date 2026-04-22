@@ -1,5 +1,26 @@
 
+.codex
 
+# Editor/OS cruft
+.DS_Store
+Thumbs.db
+*~
+*.swp
+*.swo
+
+# Local tool state
+.cache/
+.history/
+.direnv/
+.envrc
+
+# Local machine overrides and ad-hoc backups
+*.local
+*.bak
+*.backup
+*.old
+*.orig
+*.tmp
 *.bck
 backup/
 old/
