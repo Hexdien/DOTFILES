@@ -1,7 +1,7 @@
 // -*- mode: jsonc -*-
 {
   "reload_style_on_change": true,
-  //"layer": "top", // Waybar at top layer
+  //"layer": "bottom", // Waybar at top layer
   "position": "top", // Waybar position (top|bottom|left|right)
   "height": 36, // Waybar height (to be removed for auto height)
   "width": 800, // Waybar width
@@ -17,10 +17,6 @@
     "custom/mpv",
     "custom/dolphin",
     "hyprland/workspaces"
-  ],
-  "modules-center": [
-    "hyprland/mode",
-    "hyprland/scratchpad",
   ],
   "modules-right": [
     "tray",
@@ -45,23 +41,25 @@
     //   "TelegramDesktop": "$HOME/.local/share/icons/hicolor/16x16/apps/telegram.png"
     // }
   },
-  "clock": {
+
+"clock": {
     "format": "{:%H:%M}",
-    "format-alt": "{:L%A, %B %d, %Y (%R)} ",
-    "tooltip-format": "\n<span size='9pt' >{calendar}</span>",
+    "tooltip-format": "<span color='#35b9ab'><tt><small>{calendar}</small></tt></span>",
+    "on-click": "/usr/bin/flatpak run org.gnome.clocks",
+      "locale": "pt_BR.UTF-8",
     "calendar": {
       "mode": "year",
       "mode-mon-col": 3,
       "weeks-pos": "right",
       "on-scroll": 1,
       "format": {
-        "months": "<span color='#ffead3'><b>{}</b></span>",
-        "days": "<span color='#ecc6d9'><b>{}</b></span>",
-        "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
-        "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
-        "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
+        "months":    "<span color='#35b9ab'><b>{}</b></span>",
+        "weeks":    "<span color='#73ba25'><b>{}</b></span>",
+        "weekdays": "<span color='#21a4df'><b>{}</b></span>",
+        "today":    "<span color='#35b9ab' background='#173f4f'><b>{}</b></span>"
       }
     },
+
     "actions": {
       "on-click-right": "mode",
       "on-click-forward": "tz_up",
@@ -70,7 +68,8 @@
       "on-scroll-down": "shift_down"
     }
   },
-       "network": {
+
+  "network": {
     // "interface": "wlp2*", // (Optional) To force the use of this interface
     "format-wifi": "{essid} ({signalStrength}%) ",
     "format-ethernet": "",
@@ -107,7 +106,7 @@
   "custom/power": {
     "format": "",
     "tooltip": false,
-    "on-click": "$HOME/gitHubRepositorios/dotfiles/waybar/power_menu.sh"
+    "on-click": "$HOME/.local/bin/power_menu"
     },
   
   "disk": {
